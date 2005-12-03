@@ -1,10 +1,10 @@
-# $Id: Mbox.pm,v 1.12 2005/12/02 15:29:32 asc Exp $
+# $Id: Mbox.pm,v 1.13 2005/12/03 19:10:27 asc Exp $
 use strict;
 
 package MT::Import::Mbox;
 use base qw (MT::Import::Base);
 
-$MT::Import::Mbox::VERSION = '1.0';
+$MT::Import::Mbox::VERSION = '1.01';
 
 =head1 NAME
 
@@ -120,7 +120,7 @@ This package is designed to be used with Movable Type 3.2
 You will need to copy and paste, or link to, the custom version
 of this file located in :
 
- /path/to/MT-Import-Mbox-1.0/templates/archives.html
+ /path/to/MT-Import-Mbox-1.01/templates/archives.html
 
 =item * B<Daily Archive> template
 
@@ -129,7 +129,7 @@ Ensure that it is enabled.
 You will need to copy and paste, or link to, the custom version
 of this file located in :
 
- /path/to/MT-Import-Mbox-1.0/templates/date-based-archive.html
+ /path/to/MT-Import-Mbox-1.01/templates/date-based-archive.html
 
 =item * B<Monthly Archive> template
 
@@ -138,7 +138,7 @@ Ensure that it is enabled.
 You will need to copy and paste, or link to, the custom version
 of this file located in :
 
- /path/to/MT-Import-Mbox-1.0/templates/date-based-archive-monthly.html
+ /path/to/MT-Import-Mbox-1.01/templates/date-based-archive-monthly.html
 
 =item * B<Category Archive> template
 
@@ -149,7 +149,7 @@ Ensure that it is enabled.
 You will need to copy and paste, or link to, the custom version
 of this file located in :
 
- /path/to/MT-Import-Mbox-1.0/templates/individual-entry-archive.html
+ /path/to/MT-Import-Mbox-1.01/templates/individual-entry-archive.html
 
 =back
 
@@ -160,7 +160,7 @@ I<Future releases may try to automate this process.>
 In order to rebuild your templates with bi-directional trackback
 threading, you will need to install the B<MTPingUrls> plugin.
 
- cp /path/to/MT-Import-Mbox-1.0/plugins/pinged-by-entry \
+ cp /path/to/MT-Import-Mbox-1.01/plugins/pinged-by-entry \
     /path/to/your/cgi-bin/mt/plugins/
 
 I<Future releases may try to automate this process.>
@@ -339,7 +339,9 @@ sub import_msg () {
         my $reply  = $self->mk_id($msg->header("In-Reply-To"));
 
         my $author = $msg->header("From");
-        $author    = $self->mk_author(($self->find_addrs($author))[0]);
+        my $first  = ($self->find_addrs($author))[0];
+
+        $author    = $self->mk_author($first,$first);
 
         $entry ||= MT::Entry->new();
         $entry->title($msg->header("Subject"));
@@ -659,11 +661,11 @@ sub mk_upload_root {
 
 =head1 VERSION
 
-1.0
+1.01
 
 =head1 DATE
 
-$Date: 2005/12/02 15:29:32 $
+$Date: 2005/12/03 19:10:27 $
 
 =head1 AUTHOR
 

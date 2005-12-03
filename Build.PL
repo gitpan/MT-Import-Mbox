@@ -1,4 +1,4 @@
-# $Id: Build.PL,v 1.4 2005/12/02 15:25:55 asc Exp $
+# $Id: Build.PL,v 1.5 2005/12/03 19:12:19 asc Exp $
 
 use strict;
 use Module::Build;
@@ -9,7 +9,7 @@ my $build = Module::Build->new(module_name => 'MT::Import::Mbox',
 			       dist_version_from => 'lib/MT/Import/Mbox.pm',
 			       license           => 'perl',
 			       requires => {
-                                            'MT::Import::Base' => '>= 1.0',
+                                            'MT::Import::Base' => '>= 1.01',
                                             'Digest::MD5'      => '',
                                             'Email::Folder'    => '',
                                             'Email::Find'      => '',

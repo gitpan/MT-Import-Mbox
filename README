@@ -96,7 +96,7 @@ SETUP
         You will need to copy and paste, or link to, the custom version of
         this file located in :
 
-         /path/to/MT-Import-Mbox-1.0/templates/archives.html
+         /path/to/MT-Import-Mbox-1.01/templates/archives.html
 
     * Daily Archive template
         Ensure that it is enabled.
@@ -104,7 +104,7 @@ SETUP
         You will need to copy and paste, or link to, the custom version of
         this file located in :
 
-         /path/to/MT-Import-Mbox-1.0/templates/date-based-archive.html
+         /path/to/MT-Import-Mbox-1.01/templates/date-based-archive.html
 
     * Monthly Archive template
         Ensure that it is enabled.
@@ -112,7 +112,7 @@ SETUP
         You will need to copy and paste, or link to, the custom version of
         this file located in :
 
-         /path/to/MT-Import-Mbox-1.0/templates/date-based-archive-monthly.html
+         /path/to/MT-Import-Mbox-1.01/templates/date-based-archive-monthly.html
 
     * Category Archive template
         Ensure that it is enabled.
@@ -121,7 +121,7 @@ SETUP
         You will need to copy and paste, or link to, the custom version of
         this file located in :
 
-         /path/to/MT-Import-Mbox-1.0/templates/individual-entry-archive.html
+         /path/to/MT-Import-Mbox-1.01/templates/individual-entry-archive.html
 
     *Future releases may try to automate this process.*
 
@@ -129,7 +129,7 @@ SETUP
     In order to rebuild your templates with bi-directional trackback
     threading, you will need to install the MTPingUrls plugin.
 
-     cp /path/to/MT-Import-Mbox-1.0/plugins/pinged-by-entry \
+     cp /path/to/MT-Import-Mbox-1.01/plugins/pinged-by-entry \
         /path/to/your/cgi-bin/mt/plugins/
 
     *Future releases may try to automate this process.*
@@ -208,10 +208,10 @@ OBJECT METHODS (you should care about)
     Returns an *MT::Entry* object.
 
 VERSION
-    1.0
+    1.01
 
 DATE
-    $Date: 2005/12/02 15:29:32 $
+    $Date: 2005/12/03 19:10:27 $
 
 AUTHOR
     Aaron Straup Cope <ascope@cpan.org>

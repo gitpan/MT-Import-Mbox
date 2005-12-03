@@ -4,6 +4,7 @@ plugins/pinged-by-entry/pinged-by-entry.pl
 lib/MT/Import/Mbox.pm
 Makefile.PL
 MANIFEST
+MANIFEST.SKIP
 META.yml
 README
 t/00-load.t

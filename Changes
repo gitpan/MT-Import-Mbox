@@ -6,9 +6,22 @@
 @prefix asc:     <http://aaronland.info/ns/changefile/> .
                                      
 <>
-        dc:identifier           "$Id: Changes,v 1.8 2005/12/02 15:24:16 asc Exp $" ;
+        dc:identifier           "$Id: Changes,v 1.9 2005/12/03 19:10:27 asc Exp $" ;
         dc:description          "Changes for MT::Import::Mbox" ;
         dcterms:references      <http://aaronland.info/perl/mt/import/mbox/> .
+
+<http://aaronland.info/perl/mt/import/mbox/importer/MT-Import-Mbox-1.01.tar.gz>
+        dcterms:isVersionOf <http://aaronland.info/perl/mt/import/mbox/> ;
+        dcterms:replaces    <http://aaronland.info/perl/mt/import/mbox/importer/MT-Import-Mbox-1.0.tar.gz> ;
+
+        doap:Version    [
+                        doap:revision     "1.01" ;
+                        doap:created      "2005-12-03" ;
+                        ];
+        asc:changes     [
+                        asc:update        "Updated calls to mk_author to reflect changes in MT::Import::Base" ;
+                        asc:addition      "Added MANIFEST.SKIP" ;
+                        ] .
 
 <http://aaronland.info/perl/mt/import/mbox/importer/MT-Import-Mbox-1.0.tar.gz>
         dcterms:isVersionOf <http://aaronland.info/perl/mt/import/mbox/> ;
